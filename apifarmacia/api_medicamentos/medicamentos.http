@@ -1,0 +1,47 @@
+# Obter a lista de medicamentos
+GET http://localhost:3000/api/medicamentos
+Content-Type: application/json
+###
+
+# Inserir novo medicamento
+POST http://localhost:3000/api/medicamentos
+Content-Type: application/json
+
+{
+    "nome": "Dipirona",
+    "laboratorio": "Medley",
+    "dataHoraCad": "2021-01-25T17:32:25.000Z"
+}
+###
+
+# Alterar medicamento
+PUT http://localhost:3000/api/medicamentos
+Content-Type: application/json
+{
+    "nome": "Dipirona2",
+    "laboratorio": "Medley",
+}
+###
+# Excluir um medicamento
+DELETE http://localhost:3000/api/medicamentos/5f5a96dd5e818fae8fc6e1db
+Content-Type: application/json
+###
+# Obter pelo id de medicamento
+GET http://localhost:3000/api/medicamentos/6269e91a81102d90a52791dd
+Content-Type: application/json
+###
+# Obter usuários medicamento
+GET http://localhost:3000/api/medicamentos/filtro/paracetamol
+Content-Type: application/json
+###
+
+# Usuário sem nome requerido.
+POST http://localhost:3000/api/medicamentos
+Content-Type: application/json
+{
+ "nome": "",
+ "laboratorio": "Teuto",
+ "dataHoraCad": "2021-01-25T17:32:25.000Z"
+}
+###
+
